@@ -6,6 +6,5 @@
 
 UMatch3GameInstance::UMatch3GameInstance()
 {
-	DefaultSaveGameSlot = TEXT("_Match3Game");
 
 }
