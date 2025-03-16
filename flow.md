@@ -127,6 +127,9 @@ class AMatch3PlayerController {
 AMatch3PlayerController <|-- Match3PC
 note for Match3PC "蓝图类"
 
+AActor <|-- AGrid
+note for AGrid "AGrid 格子类"
+
 ```
 
 ## 蓝图方法
@@ -142,4 +145,6 @@ Get Platform Name: 获取平台名字
 每个控件蓝图，有个属性 details , 在 Graph 页签里。
 其中可以选择背景图
 
-## 
+## 在编辑器里删除继承自的 Actor 
+需要将源码删除后，再删除 Binary 目录，然后重启编辑器。
+如果重启编辑器失败，说明有编译错误，检查c++源码即可。
