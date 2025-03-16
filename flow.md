@@ -124,6 +124,9 @@ class AMatch3PlayerController {
 
 }
 
+AMatch3PlayerController <|-- Match3PC
+note for Match3PC "蓝图类"
+
 ```
 
 ## 蓝图方法
@@ -138,3 +141,5 @@ Get Platform Name: 获取平台名字
 
 每个控件蓝图，有个属性 details , 在 Graph 页签里。
 其中可以选择背景图
+
+## 

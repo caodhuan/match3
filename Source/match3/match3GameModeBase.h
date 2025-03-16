@@ -13,5 +13,6 @@ UCLASS()
 class MATCH3_API Amatch3GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+public:
+	Amatch3GameModeBase(const FObjectInitializer& ObjectInitializer);
 };
