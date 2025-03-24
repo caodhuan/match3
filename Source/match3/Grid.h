@@ -8,6 +8,30 @@
 
 class ATile;
 
+
+USTRUCT(BlueprintType)
+struct FTileType
+{
+	GENERATED_USTRUCT_BODY();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Probability = 1.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UMaterialInstanceConstant* TileMaterial = nullptr;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<class ATile> TileClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FLinearColor EffectColor = FLinearColor::White;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FTileAbilities Abilities;
+
+};
+
+
 UCLASS()
 class MATCH3_API AGrid : public AActor
 {

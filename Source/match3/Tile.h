@@ -18,9 +18,33 @@
 // 	};
 // }
 
-/**
- * 
- */
+
+USTRUCT(BlueprintType)
+struct FTileAbilities
+{
+  	GENERATED_USTRUCT_BODY();
+
+	bool CanExplode() { return bExplodes; }
+
+	bool CanSwap() { return (!bPreventSwapping && !bExplodes); }
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+ 	int32 BombPower = 0;
+
+	FileAbilities() : bExplodes(0), bPreventSwapping(0)
+	{
+		
+	}
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+ 	uint32 bExplodes : 1;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint32 bPreventSwapping : 1;
+};
+
 UCLASS()
 class MATCH3_API ATile : public APaperSpriteActor
 {

@@ -130,6 +130,9 @@ note for Match3PC "蓝图类"
 AActor <|-- AGrid
 note for AGrid "AGrid 格子类"
 
+APaperSpriteActor <|-- ATile
+note for ATile "2D精灵对象，代表一个具体的可移动的元素"
+
 ```
 
 ## 蓝图方法
