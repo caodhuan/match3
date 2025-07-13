@@ -40,8 +40,6 @@ subgraph main_level["Main level 流程图"]
     main_level_start --> is_touch_device
     platform --> show_widget
     is_touch_device --> show_widget
-
-
     
 end
 
@@ -152,3 +150,19 @@ Get Platform Name: 获取平台名字
 
 需要将源码删除后，再删除 Binary 目录，然后重启编辑器。
 如果重启编辑器失败，说明有编译错误，检查c++源码即可。  
+
+
+## tile 下落的实现
+```c++
+GetWorldTimerManager().SetTimer(TickFallingHandle, this, &ATile::TickFalling, 0.001f, true);
+FVector NewLocation = FMath::Lerp(FallingStartLocation, FallingEndLocation, FallCompleteFraction);
+```
+
+## tile 选中交换的实现
+在 Gem_Tile 蓝图中
+
+## Select Float 节点
+相当于
+float A, b;
+bool x;
+return x ? A : b;
