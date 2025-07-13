@@ -137,17 +137,18 @@ note for ATile "2D精灵对象，代表一个具体的可移动的元素"
 
 ## 蓝图方法
 
-Get Platform Name: 获取平台名字
-  - Windows
-  - iOS
-  - Android
+Get Platform Name: 获取平台名字  
 
+- Windows
+- iOS
+- Android
 
 ## widget 控件
 
 每个控件蓝图，有个属性 details , 在 Graph 页签里。
 其中可以选择背景图
 
-## 在编辑器里删除继承自的 Actor 
+## 在编辑器里删除继承自的 Actor  
+
 需要将源码删除后，再删除 Binary 目录，然后重启编辑器。
-如果重启编辑器失败，说明有编译错误，检查c++源码即可。
+如果重启编辑器失败，说明有编译错误，检查c++源码即可。  
